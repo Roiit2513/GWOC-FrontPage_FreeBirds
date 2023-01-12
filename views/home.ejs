@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link rel="stylesheet" href="CSS/style.css">
     <link rel="stylesheet" href="CSS/home.css">
     <link rel="stylesheet" media="screen and (max-width: 500px)" href="CSS/mobile_style.css">
@@ -25,22 +26,57 @@
         </ul>
     </div>
     <div id="home">
-        <nav id="navbar">
-            <ul>
-                <li class="item"><a href="products">Our Products</a></li>
-                <li class="item hide"><a href="about">About Us</a></li>
-                <li class="item hide"><a href="contact">Contact Us</a></li>
-                <li class="item hide" id="login"><a href="">Log in</a></li>
-                <li class="item hide" id ="signup"><a href="signUp">Sign up</a></li>
-            </ul>
-        </nav>
-        <section id="title">
-            <h1>A-One Bakery</h1>
-            <p>Sweetness and Delight in Every Bite</p>
-        </section>
+        <%- include('header'); -%>
+        <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active" data-bs-interval="2000">
+                <img src="img/background.webp" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item" data-bs-interval="2000">
+                <img src="img/mob_bg.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item" data-bs-interval="2000">
+                <img src="img/photo1.avif" class="d-block w-100" alt="...">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+        <div id="content">
+            <div class="line"></div>
+            <div class="box" id="findUs">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d30439.809982126455!2d72.77156777216396!3d21.18345270947758!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1673527687436!5m2!1sen!2sin" width="300" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <div class="text">  
+
+                </div>
+            </div>
+            <div class="line"></div>
+            <div class="box" id="homeCake">
+                <div class="text">
+                    
+                </div>
+                <img src="img/cakeHome.jpg" alt="">
+            </div>
+            <div class="line"></div>
+            <div class="box" id="homePastry">
+                <img src="img/pastry.webp" alt="">
+                <div class="text">
+                    
+                </div>
+            </div>
+            <div class="line"></div>
+        </div>
     </div>
 
     <script src="JS/jq.js"></script>
     <script src="JS/index.js"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 </body>
 </html>
