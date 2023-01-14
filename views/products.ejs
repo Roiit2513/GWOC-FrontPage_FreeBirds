@@ -10,6 +10,61 @@
 </head>
 <body>
     <%- include('header'); -%>
-    <h1>Our Products Page</h1>
+    <div id="entire">
+        <div id="filters">
+            <form action="/products" id="cost" method="post">
+                <h2>Select Price Range : </h2>
+                <div class="options">
+                    <button type="submit" name="priceRange" class="cost-btn" value="10000">All</button>
+                    <button type="submit" name="priceRange" class="cost-btn" value="400">Below 400</button>
+                    <button type="submit" name="priceRange" class="cost-btn" value="500">Below 500</button>
+                    <button type="submit" name="priceRange" class="cost-btn" value="600">Below 600</button>
+                    <button type="submit" name="priceRange" class="cost-btn" value="700">Below 700</button>
+                    <button type="submit" name="priceRange" class="cost-btn" value="800">Below 800</button>
+                    <button type="submit" name="priceRange" class="cost-btn" value="1000">Below 1000</button>
+                </div>
+            </form>
+            <form action="/products" id="flavor" method="post">
+                <h2>Select Cake Flavor : </h2>
+                <div class="options">
+                    <button type="submit" name="flavors" class="flavor" value="All">All</button>
+                    <button type="submit" name="flavors" class="flavor" value="Chocolate">Chocolate</button>
+                    <button type="submit" name="flavors" class="flavor" value="Vanila">Vanila</button>
+                    <button type="submit" name="flavors" class="flavor" value="Pineapple">Pineapple</button>
+                </div>
+            </form>
+            <form action="/products" id="ftr" method="post">
+                <h2>Filter :</h2>
+                <div class="options">
+                    <button type="submit" name="filter" value="cakePop">Poplarity</button>
+                    <button type="submit" name="filter" value="cakeCost">Price</button>
+                    <button type="submit" name="filter" value="cakeFlavor">Category</button>
+                </div>
+            </form>
+        </div>
+        <% let count = 0; %>
+        <% for(let i = 0; i < arr.length; i++){ %>
+            <% if(arr[i].cakeFlavor == flavor || flavor == "All"){ %>
+                <% if(arr[i].cakeCost <= cost){ %>
+                    <% count = 1; %>
+                    <% let str = wp + arr[i].cakeId %>
+            <a href=<%= str %> id="block">
+                <div class="cake">
+                    <img src="img/cakeHome.jpg" alt="cakaphotu">
+                    <div class="cakeInfo">
+                        <h2><%= arr[i].cakeName %></h2>
+                        <p><%= arr[i].cakeDiscription %></p>
+                        <div class="cost">₹ <%= arr[i].cakeCost %></div>
+                    </div>
+                </div>
+            </a>
+            <% } %>
+            <% } %>
+        <% } %>
+        <% if(count === 0){ %>
+            <h1>Oops ! No available Cakes in above Category</h1>
+        <% } %>
+    </div>
+    <%- include('footer'); -%>
 </body>
 </html>

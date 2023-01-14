@@ -1,0 +1,60 @@
+@font-face {
+    font-family: abalone;
+    src: url('../fonts/AbaloneSmile.ttf');
+}
+#entire{
+    width: 100%;
+    min-height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#box{
+    display: flex;
+    width: 60%;
+    height: 550px;
+    margin: 30px;
+    border: solid 2px;
+    border-radius: 20px;
+}
+#uImg{
+    width: 30%;
+    height: 550px;
+    border-right: solid 2px;
+}
+#uText{
+    width: 70%;
+    height: 550px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#uText form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#uText input{
+    width: 70%;
+    height: 50px;
+    margin: 10px 0px;
+    text-align: center;
+    border-radius: 10px;
+    font-size: 20px;
+    font-family: abalone;
+}
+#uText button{
+    font-family: abalone;
+    width: 100px;
+    height: 60px;
+    padding: 5px;
+    background-color: green;
+    margin: 10px 0px;
+    border-radius: 30px;
+    font-size: 17px;
+    cursor: pointer;
+}

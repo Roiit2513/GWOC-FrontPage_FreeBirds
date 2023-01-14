@@ -6,6 +6,10 @@
     font-family: abalone;
     src: url('../fonts/AbaloneSmile.ttf');
 }
+@font-face {
+    font-family: katibeh;
+    src: url('../fonts/Katibeh.ttf');
+}
 #navbar{
     width: 100%;
     min-height: 100px;
@@ -22,6 +26,7 @@
     list-style: none;
     font-size: 1.2rem;
     font-family: cursive;
+    margin: 0px 10px;
 }
 #navbar ul li a{
     color: black;
@@ -40,4 +45,41 @@
 }
 #list{
     display: none;
+}
+
+
+#footer{
+    width: 100%;
+    height: 300px;
+    display: flex;
+}
+#footer h1{
+    font-family: katibeh;
+    color: aliceblue;
+    margin: 20px 40px;
+}
+.underline{
+    width: 100px;
+    height: 2px;
+    margin: 0px 40px;
+    background-color: aliceblue;
+}
+#orderNow{
+    width: 33%;
+    background-color: rgba(0, 0, 0, 0.782);
+}
+#followUs{
+    width: 33%;
+    background-color: rgba(36, 34, 34, 0.782);
+}
+#owner{
+    width: 33%;
+    background-color: rgba(0, 0, 0, 0.782);
+}
+#owner button{
+    padding: 20px;
+    margin: 40px;
+    border-radius: 20px;
+    background-color: white;
+    cursor: pointer;
 }

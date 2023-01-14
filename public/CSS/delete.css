@@ -1,0 +1,34 @@
+@font-face {
+    font-family: abalone;
+    src: url('../fonts/AbaloneSmile.ttf');
+}
+#entire{
+    width: 100%;
+    min-height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#box{
+    width: 50%;
+    min-height: 350px;
+    margin: 50px;
+    display: flex;
+    flex-direction: column;
+    border: solid 2px;
+    border-radius: 20px;
+}
+.names{
+    display: flex;
+    align-items: center;
+    min-height: 50px;
+    border-bottom: solid 1px;
+}
+.names input{
+    margin: 0px 10px;
+}
+.names p{
+    text-align: center;
+    margin: 0px 10px;
+    font-family: abalone;
+}

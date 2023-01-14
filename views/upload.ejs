@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Item</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/upload.css">
+</head>
+<body>
+    <%- include('header'); -%>
+    
+    <div id="entire">
+        <div id="box">
+            <div id="uImg"></div>
+            <div id="uText">
+                <form action="/upload" method="post">
+                    <input type="number" name="Id" placeholder="Enter Cake Id" required>
+                    <input type="text" name="Name" placeholder="Enter Cake Name" required>
+                    <input type="text" name="Flavor" placeholder="Enter Cake Flavor" required>
+                    <input type="number" name="Cost" placeholder="Enter Cake Cost" required>
+                    <input type="text" name="Discription" placeholder="Enter Cake Discription" required>
+                    <button type="submit">Upload Cake</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <%- include('footer'); -%>
+</body>
+</html>
