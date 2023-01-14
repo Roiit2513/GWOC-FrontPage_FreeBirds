@@ -31,7 +31,8 @@
                     <button type="submit" name="flavors" class="flavor" value="All">All</button>
                     <button type="submit" name="flavors" class="flavor" value="Chocolate">Chocolate</button>
                     <button type="submit" name="flavors" class="flavor" value="Vanila">Vanila</button>
-                    <button type="submit" name="flavors" class="flavor" value="Pineapple">Pineapple</button>
+                    <button type="submit" name="flavors" class="flavor" value="Special">Special</button>
+                    <button type="submit" name="flavors" class="flavor" value="Fruit">Fruit</button>
                 </div>
             </form>
             <form action="/products" id="ftr" method="post">
@@ -49,9 +50,10 @@
                 <% if(arr[i].cakeCost <= cost){ %>
                     <% count = 1; %>
                     <% let str = wp + arr[i].cakeId %>
+                    <% let imgL = "img/" + arr[i].cakeId + ".webp" %>
             <a href=<%= str %> id="block">
                 <div class="cake">
-                    <img src="img/cakeHome.jpg" alt="cakaphotu">
+                    <img src=<%= imgL %> alt="cakaphotu">
                     <div class="cakeInfo">
                         <h2><%= arr[i].cakeName %></h2>
                         <p><%= arr[i].cakeDiscription %></p>
