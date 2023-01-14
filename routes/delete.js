@@ -15,7 +15,6 @@ router.get("/" , (req, res) => {
 });
 router.post("/" , (req, res) => {
     let str = req.body.checkbox;
-    console.log(str);
     Cake.deleteOne({cakeId: str} , (err) => {
         if(err){
             console.log(err);

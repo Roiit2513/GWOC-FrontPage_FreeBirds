@@ -10,7 +10,7 @@
     align-items: center;
     justify-content: center;
 }
-#box{
+#ubox{
     display: flex;
     width: 60%;
     height: 550px;

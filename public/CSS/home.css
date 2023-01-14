@@ -65,10 +65,12 @@
 .box{
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
     align-items: center;
     height: 400px;
     width: 100%;
+}
+.box img{
+    height: 200px;
 }
 .text{
     width: 600px;
@@ -77,11 +79,7 @@
     margin: 0% 5%;
 }
 
-#homeCake img{
-    width: 300px;
-    height: 300px;
-}
-#homePastry img{
+.box img{
     width: 300px;
     height: 300px;
 }
