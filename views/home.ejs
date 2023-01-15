@@ -9,20 +9,30 @@
     <link rel="stylesheet" href="CSS/style.css">
     <link rel="stylesheet" href="CSS/home.css">
     <link rel="stylesheet" media="screen and (max-width: 500px)" href="CSS/mobile_500.css">
+    <link rel="shortcut icon" href="Favicon/favicon.ico" type="image/x-icon">
 </head>
 <body>
     <div id="home">
         <%- include('header'); -%>
         <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
-              <div class="carousel-item active" data-bs-interval="2000">
-                <img src="img/background.webp" class="d-block w-100" alt="...">
+              <div class="carousel-item active" data-bs-interval="4000">
+                <picture>
+                  <source media="(min-width: 500px)" srcset="img/img1.jpg">
+                  <img src="img/mobimg1.png" class="d-block w-100" alt="...">
+                </picture>
               </div>
               <div class="carousel-item" data-bs-interval="2000">
-                <img src="img/mob_bg.jpg" class="d-block w-100" alt="...">
+                <picture>
+                  <source media="(min-width: 500px)" srcset="img/img2.png">
+                  <img src="img/mobimg2.jpg" class="d-block w-100" alt="...">
+                </picture>
               </div>
               <div class="carousel-item" data-bs-interval="2000">
-                <img src="img/photo1.avif" class="d-block w-100" alt="...">
+                <picture>
+                  <source media="(min-width: 500px)" srcset="img/img3.png">
+                  <img src="img/mobimg3.jpg" class="d-block w-100" alt="...">
+                </picture>
               </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">

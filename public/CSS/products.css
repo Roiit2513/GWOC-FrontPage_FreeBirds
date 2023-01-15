@@ -34,6 +34,7 @@
     margin: 5px;
     margin-top: 20px;
     font-family: abalone;
+    color:#431709;
 }
 .options{
     width: 100%;
@@ -50,6 +51,8 @@
     font-size: 18px;
     border-radius: 10px;
     margin: 10px 20px;
+    border-color: #431709;
+    color:#431709;
 }
 .options button:hover{
     cursor: pointer;
@@ -61,7 +64,7 @@
     display: flex;
     justify-content: center;
     text-decoration: none;
-    color: black;
+    color: aliceblue;
 }
 .cake{
     display: flex;
@@ -71,6 +74,7 @@
     border-radius: 20px;
     margin: 20px;
     transition: 1s;
+    background-color: #431709ce;
 }
 .cake:hover{
     width: 90%;
@@ -78,7 +82,7 @@
 }
 .cake img{
     width: 230px;
-    height: 230px;
+    height: 233px;
     border-radius: 20px;
     object-fit: cover;
 }

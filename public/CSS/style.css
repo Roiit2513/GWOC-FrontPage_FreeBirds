@@ -10,17 +10,25 @@
     font-family: katibeh;
     src: url('../fonts/Katibeh.ttf');
 }
+body{
+    background-color: rgba(236, 239, 242, 0.609);
+}
 #navbar{
     width: 100%;
-    min-height: 100px;
+    height: 150px;
     display: flex;
     align-items: center;
-    background-color: aliceblue;
+    background-color: rgba(236, 239, 242, 0.618);
+}
+#navbar img{
+    height: 100%;
+    margin-left: 30px;
 }
 #navbar ul{
     width: 95%;
     display: flex;
     margin: 0px 30px;
+    margin-left: 0px;
     padding-left: 0px;
 }
 #navbar ul li{
@@ -30,7 +38,7 @@
     margin: 0px 10px;
 }
 #navbar ul li a{
-    color: black;
+    color: #431709;
     display: block;
     padding: 1rem;
     text-decoration: none;
@@ -39,7 +47,7 @@
 }
 #navbar ul li a:hover{
     color: aliceblue;
-    background-color: black;
+    background-color: #432616;
 }
 #threeLines{
     display: none;
@@ -51,8 +59,9 @@
 
 #footer{
     width: 100%;
-    min-height: 300px;
+    height: 300px;
     display: flex;
+    margin-top: 40px;
 }
 #footer h1{
     font-family: katibeh;
@@ -67,16 +76,54 @@
 }
 #orderNow{
     width: 33%;
-    background-color: rgba(0, 0, 0, 0.782);
+    background-color: #432616;
+    margin-top: 0;
 }
+#orderNow::before{
+    background: linear-gradient(-45deg, #432616 16px, transparent 0), linear-gradient(45deg, #432616ef 16px, transparent 0);
+    background-repeat: repeat-x;
+    background-size: 22px 22px;
+    content: "";
+    display: block;
+    position: relative;
+    top: -22px;
+    left: 0px;
+    width: 100%;
+    height: 32px;
+} 
 #followUs{
     width: 33%;
-    background-color: rgba(36, 34, 34, 0.782);
+    background-color: #5e4030;
 }
+#followUs::before{
+    background: linear-gradient(-45deg, #5e4030 16px, transparent 0), linear-gradient(45deg, #432616ef 16px, transparent 0);
+    background-repeat: repeat-x;
+    background-size: 22px 22px;
+    content: "";
+    display: block;
+    position: relative;
+    top: -22px;
+    left: 0px;
+    width: 100%;
+    height: 32px;
+
+} 
 #location{
     width: 33%;
-    background-color: rgba(0, 0, 0, 0.782);
+    background-color: #432616;
 }
+#location::before{
+    background: linear-gradient(-45deg, #432616 16px, transparent 0), linear-gradient(45deg, #432616ef 16px, transparent 0);
+    background-repeat: repeat-x;
+    background-size: 22px 22px;
+    content: "";
+    display: block;
+    position: relative;
+    top: -22px;
+    left: 0px;
+    width: 100%;
+    height: 32px;
+} 
 #location button{
     padding: 20px;
     margin: 40px;

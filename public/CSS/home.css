@@ -9,6 +9,7 @@
 #home{
     display: flex;
     flex-direction: column;
+    align-items: center;
     width: 100%;
     min-height: 500px;
 }
@@ -34,7 +35,8 @@
     text-align: center;
 }
 #carouselExampleAutoplaying{
-    height: 400px;
+    height: 500px;
+    width: 950px;
 }
 #carouselExampleAutoplaying .carousel-inner{
     height: 100%;
@@ -45,7 +47,6 @@
 .carousel-item img{
     object-fit: cover;
 }
-
 
 
 #content{

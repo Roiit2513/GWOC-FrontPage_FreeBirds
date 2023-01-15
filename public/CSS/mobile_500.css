@@ -43,7 +43,7 @@
     !important;
     flex-direction: column;
     /* background-color: rgba(88, 113, 239, 0.472); */
-    background-color: rgba(0, 0, 0, 0.775);
+    background-color: #432616e6;
     z-index: 10;
 }
 .blank{
@@ -72,18 +72,28 @@
 /* Footer */
 #footer{
     flex-direction: column;
+    min-height: 600px;
 }
 #orderNow{
     width: 100%;
     height: 200px;
 }
+#orderNow::before{
+    display: none;
+}
 #followUs{
     width: 100%;
     height: 200px;
 }
+#followUs::before{
+    display: none;
+}
 #location{
     width: 100%;
     height: 200px;
+}
+#location::before{
+    display: none;
 }
 
 /* Products Page */
@@ -110,6 +120,9 @@
     margin: 25px 0px;
     align-items: center;
 }
+.cakeInfo h2{
+    text-align: center;
+}
 .cake img{
     width: 300px;
     height: 300px;
@@ -117,7 +130,12 @@
 
 /* Home Page */
 #carouselExampleAutoplaying {
-    height: 300px;
+    height: 400px;
+    width: 100%;
+}
+.carousel-item img{
+    width: 100%;
+    object-fit: 100%;
 }
 .line {
     width: 200px;
