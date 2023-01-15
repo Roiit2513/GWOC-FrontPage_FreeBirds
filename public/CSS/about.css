@@ -1,0 +1,128 @@
+@font-face {
+    font-family: abalone;
+    src: url('../fonts/AbaloneSmile.ttf');
+}
+#about{
+    width: 100%;
+    min-height: 500px;
+    display: flex;
+}
+#left{
+    width: 50%;
+    border-right: solid 5px #431709;
+    border-radius: 20px;
+}
+#left img{
+    width: 80%;
+    margin: 30px 0px;
+}
+#l1{
+    display: flex;
+}
+#slant1{
+    width: 20%;
+    margin: 30px 0px;
+    background: 
+         linear-gradient(45deg,
+             rgba(0,0,0,0) 0%,
+             rgba(0,0,0,0) calc(40% - 0.8px),
+             #431709 50%,
+             rgba(0,0,0,0) calc(50% + 0.8px),
+             rgba(0,0,0,0) 100%),
+         linear-gradient(-45deg,
+             rgba(0,0,0,0) 0%,
+             rgba(0,0,0,0) calc(40% - 0.8px),
+             #431709 50%,
+             rgba(0,0,0,0) calc(50% + 0.8px),
+             rgba(0,0,0,0) 100%);
+}
+#right{
+    width: 50%;
+    border-left: solid 4px #431709;
+    border-radius: 20px;
+}
+.blankBox{
+    width: 100%;
+    height: 300px;
+}
+.aboutText{
+    width: 100%;
+    min-height: 300px;
+    display: flex;
+}
+.slant2{
+    width: 20%;
+    margin: 30px 0px;
+    background: 
+         linear-gradient(45deg,
+             rgba(0,0,0,0) 0%,
+             rgba(0,0,0,0) calc(40% - 0.8px),
+             #431709 50%,
+             rgba(0,0,0,0) calc(50% + 0.8px),
+             rgba(0,0,0,0) 100%),
+         linear-gradient(-45deg,
+             rgba(0,0,0,0) 0%,
+             rgba(0,0,0,0) calc(40% - 0.8px),
+             #431709 50%,
+             rgba(0,0,0,0) calc(50% + 0.8px),
+             rgba(0,0,0,0) 100%);
+}
+.aim{
+    width: 80%;
+    border: dashed 3px #431709;
+    border-radius: 20px;
+    margin: 30px 0px;
+    margin-right: 15px;
+    display: flex;
+    align-items: center;
+}
+.aim p{
+    font-family: abalone;
+    padding: 15px;
+    padding-left: 20px;
+    text-align: justify;
+    color: #431709;
+    font-size: 18px;
+}
+
+#left .blankBox{
+    height: 160px;
+}
+#l2{
+    display: flex;
+}
+#l3{
+    display: flex;
+}
+#l2 img{
+    width: 75%;
+    margin-left: 33px;
+    height: 300px;
+}
+#l3 img{
+    width: 75%;
+    margin-left: 33px;
+    height: 300px;
+    border: solid 4px #431709;
+    border-radius: 50px;
+}
+#slant2{
+    width: 20%;
+    margin: 30px 0px;
+    background: 
+         linear-gradient(45deg,
+             rgba(0,0,0,0) 0%,
+             rgba(0,0,0,0) calc(40% - 0.8px),
+             #431709 50%,
+             rgba(0,0,0,0) calc(50% + 0.8px),
+             rgba(0,0,0,0) 100%),
+         linear-gradient(-45deg,
+             rgba(0,0,0,0) 0%,
+             rgba(0,0,0,0) calc(40% - 0.8px),
+             #431709 50%,
+             rgba(0,0,0,0) calc(50% + 0.8px),
+             rgba(0,0,0,0) 100%);
+}
+#r2{
+    height: 200px;
+}
