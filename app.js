@@ -19,7 +19,7 @@ app.use("/upload" , upload.page);
 const deleteItem = require("./routes/delete");
 app.use("/delete" , deleteItem);
 const signUp = require("./routes/signup");
-app.use("/signup" , signUp);
+app.use("/signup" , signUp.page);
 const login = require("./routes/login");
 app.use("/login" , login);
 
