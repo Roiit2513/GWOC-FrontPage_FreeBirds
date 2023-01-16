@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="CSS/products.css">
     <link rel="stylesheet" media="screen and (max-width: 500px)" href="CSS/mobile_500.css">
     <link rel="shortcut icon" href="Favicon/favicon.ico" type="image/x-icon">
+    <script defer src="JS/anim.js"></script>
 </head>
 <body>
     <%- include('header'); -%>
@@ -52,7 +53,7 @@
                     <% count = 1; %>
                     <% let str = wp + arr[i].cakeId %>
                     <% let imgL = "img/" + arr[i].cakeId + ".webp" %>
-            <a href=<%= str %> id="block">
+            <a class="op0" href=<%= str %> id="block">
                 <div class="cake">
                     <img src=<%= imgL %> alt="cakaphotu">
                     <div class="cakeInfo">

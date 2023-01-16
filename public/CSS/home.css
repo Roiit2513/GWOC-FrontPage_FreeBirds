@@ -76,12 +76,31 @@
 .text{
     width: 600px;
     height: 300px;
-    border: solid 1px;
     margin: 0% 5%;
+    display: flex;
+    align-items: center;
 }
 
 .box img{
     width: 300px;
     height: 300px;
     border-radius: 40px;
+}
+.text p{
+    font-family: abalone;
+    color: #431709;
+    text-align: center;
+    font-size: 20px;
+}
+
+.op0{
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(100%);
+    transition: all 1s;
+}
+.op1{
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
 }

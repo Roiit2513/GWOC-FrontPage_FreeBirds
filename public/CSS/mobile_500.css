@@ -68,6 +68,19 @@
     padding: 5px;
     font-size: 16px;
 }
+#navbar{
+    height: 180px;
+}
+#navbar img{
+    margin: 0px;
+    height: 80%;
+}
+#mobTitle{
+    display: flex;
+}
+#mobTitle img{
+    width: 80%;
+}
 
 /* Footer */
 #footer{
@@ -191,7 +204,7 @@ iframe {
     margin-left: 20px;
 }
 #left .blankBox{
-    height: 517px;
+    height: 415px;
 }
 #l3 img {
     border: 0px;
@@ -200,9 +213,20 @@ iframe {
     width: 100%;
     margin-left: 10px;
     position: absolute;
-    top: 150px;
-    height: 1814px;
+    top: 250px;
+    height: 1634px;
 }
 #right .blankBox{
-    height: 300px;
+    height: 230px;
+}
+#r2{
+    height: 195px
+    !important;
+}
+#lb2{
+    height: 435px
+    !important;
+}
+.aim{
+    height: 420px;
 }

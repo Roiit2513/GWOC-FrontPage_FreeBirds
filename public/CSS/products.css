@@ -23,9 +23,11 @@
 }
 #ftr{
     width: 20%;
+    background-color: #43261645;
 }
 #cost{
     width: 40%;
+    background-color: #43261645;
 }
 #flavor{
     width: 40%;
@@ -112,3 +114,14 @@
     font-family: abalone;
 }
 
+.op0{
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: all 1s;
+}
+.op1{
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
