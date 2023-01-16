@@ -230,3 +230,16 @@ iframe {
 .aim{
     height: 420px;
 }
+
+/* Contact Page */
+#loc{
+    flex-direction: column;
+    align-items: center;
+}
+#loc iframe{
+    width: 100%;
+    margin: 0px;
+}
+#loc .text{
+    height: 500px;
+}

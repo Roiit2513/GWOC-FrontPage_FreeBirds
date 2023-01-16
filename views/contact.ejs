@@ -6,12 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us</title>
     <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/contact.css">
     <link rel="stylesheet" media="screen and (max-width: 500px)" href="CSS/mobile_500.css">
     <link rel="shortcut icon" href="Favicon/favicon.ico" type="image/x-icon">
 </head>
 <body>
     <%- include('header'); -%>
-    <h1>Contact Us Page</h1>
+    <div id="contactPage">
+        <div id="loc">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d30439.809982126455!2d72.77156777216396!3d21.18345270947758!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1673527687436!5m2!1sen!2sin"
+                 style="border:0; border-radius: 20px;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+            <div class="text">
+                <p><b>FIND US AT</b> : <br> A-one cake shop, Jogani Nagar, Palanpur Patia, Surat, Gujarat 395009 <br> <a
+                    target="_blank" href="https://goo.gl/maps/w6rdN6aATVjXFKF77" style="color: #231709;">Click</a> on the
+                  map to get complete location.</p>
+                <p><br><b>EMAID ID</b> : a1bakery@gmail.com</p>
+                <p><br><b>PHONE NO.</b> : 078743 32255</p>
+            </div>
+        </div>
+    </div>
     <%- include('footer'); -%>
     <script src="JS/jq.js"></script>
     <script src="JS/index.js"></script>
