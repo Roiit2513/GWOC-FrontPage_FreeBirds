@@ -255,3 +255,10 @@ iframe {
 #loc .text{
     height: 500px;
 }
+
+
+/* login signup */
+#logImg{
+    display: none
+    !important;
+}
