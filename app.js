@@ -18,6 +18,10 @@ const upload = require("./routes/upload");
 app.use("/upload" , upload.page);
 const deleteItem = require("./routes/delete");
 app.use("/delete" , deleteItem);
+const signUp = require("./routes/signup");
+app.use("/signup" , signUp);
+const login = require("./routes/login");
+app.use("/login" , login);
 
 
 app.get("/" , (req, res) => {

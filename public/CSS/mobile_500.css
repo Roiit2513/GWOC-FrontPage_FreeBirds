@@ -110,6 +110,15 @@
 }
 
 /* Products Page */
+#filters{
+    min-height: 0;
+    flex-direction: column;
+}
+#filters form{
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+}
 #filters form h2{
     font-size: 20px;
 }
@@ -140,6 +149,9 @@
 .cake img{
     width: 300px;
     height: 300px;
+}
+.dropdown{
+    display: block;
 }
 
 /* Home Page */

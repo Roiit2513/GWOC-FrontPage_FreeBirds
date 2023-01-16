@@ -33,8 +33,7 @@
     width: 40%;
 }
 #filters form h2{
-    margin: 5px;
-    margin-top: 20px;
+    margin: 15px;
     font-family: abalone;
     color:#431709;
 }
@@ -76,7 +75,7 @@
     border-radius: 20px;
     margin: 20px;
     transition: 1s;
-    background-color: #431709ce;
+    background-color: #431709;
 }
 .cake:hover{
     width: 90%;
@@ -124,4 +123,7 @@
     opacity: 1;
     filter: blur(0);
     transform: translateX(0);
+}
+.dropdown{
+    display: none;
 }

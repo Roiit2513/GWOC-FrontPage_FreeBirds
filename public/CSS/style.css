@@ -12,6 +12,7 @@
 }
 body{
     background-color: rgba(236, 239, 242, 0.609);
+    overflow-x: hidden;
 }
 #navbar{
     width: 100%;

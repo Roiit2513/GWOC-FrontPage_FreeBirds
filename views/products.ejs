@@ -1,78 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Products</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link rel="stylesheet" href="CSS/style.css">
     <link rel="stylesheet" href="CSS/products.css">
     <link rel="stylesheet" media="screen and (max-width: 500px)" href="CSS/mobile_500.css">
     <link rel="shortcut icon" href="Favicon/favicon.ico" type="image/x-icon">
     <script defer src="JS/anim.js"></script>
 </head>
+
 <body>
     <%- include('header'); -%>
-    <div id="entire">
-        <div id="filters">
-            <form action="/products" id="cost" method="post">
-                <h2>Select Price Range : </h2>
-                <div class="options">
-                    <button type="submit" name="priceRange" class="cost-btn" value="10000">All</button>
-                    <button type="submit" name="priceRange" class="cost-btn" value="400">Below 400</button>
-                    <button type="submit" name="priceRange" class="cost-btn" value="500">Below 500</button>
-                    <button type="submit" name="priceRange" class="cost-btn" value="600">Below 600</button>
-                    <button type="submit" name="priceRange" class="cost-btn" value="700">Below 700</button>
-                    <button type="submit" name="priceRange" class="cost-btn" value="800">Below 800</button>
-                    <button type="submit" name="priceRange" class="cost-btn" value="1000">Below 1000</button>
-                </div>
-            </form>
-            <form action="/products" id="flavor" method="post">
-                <h2>Select Cake Flavor : </h2>
-                <div class="options">
-                    <button type="submit" name="flavors" class="flavor" value="All">All</button>
-                    <button type="submit" name="flavors" class="flavor" value="Chocolate">Chocolate</button>
-                    <button type="submit" name="flavors" class="flavor" value="Vanila">Vanila</button>
-                    <button type="submit" name="flavors" class="flavor" value="Special">Special</button>
-                    <button type="submit" name="flavors" class="flavor" value="Fruit">Fruit</button>
-                </div>
-            </form>
-            <form action="/products" id="ftr" method="post">
-                <h2>Filter :</h2>
-                <div class="options">
-                    <button type="submit" name="filter" value="cakePop">Popularity</button>
-                    <button type="submit" name="filter" value="cakeCost">Price</button>
-                    <button type="submit" name="filter" value="cakeFlavor">Category</button>
-                </div>
-            </form>
-        </div>
-        <% let count = 0; %>
-        <% for(let i = 0; i < arr.length; i++){ %>
-            <% if(arr[i].cakeFlavor == flavor || flavor == "All"){ %>
-                <% if(arr[i].cakeCost <= cost){ %>
-                    <% count = 1; %>
-                    <% let str = wp + arr[i].cakeId %>
-                    <% let imgL = "img/" + arr[i].cakeId + ".webp" %>
-            <a class="op0" href=<%= str %> id="block">
-                <div class="cake">
-                    <img src=<%= imgL %> alt="cakaphotu">
-                    <div class="cakeInfo">
-                        <h2><%= arr[i].cakeName %></h2>
-                        <p><%= arr[i].cakeDiscription %></p>
-                        <div class="cost">₹ <%= arr[i].cakeCost %></div>
+        <div id="entire">
+            <div id="filters">
+                <form action="/products" id="cost" method="post">
+                    <h2>Select Price Range : </h2>
+                    <div class="options hide">
+                        <button type="submit" name="priceRange" class="cost-btn" value="10000">All</button>
+                        <button type="submit" name="priceRange" class="cost-btn" value="400">Below 400</button>
+                        <button type="submit" name="priceRange" class="cost-btn" value="500">Below 500</button>
+                        <button type="submit" name="priceRange" class="cost-btn" value="600">Below 600</button>
+                        <button type="submit" name="priceRange" class="cost-btn" value="700">Below 700</button>
+                        <button type="submit" name="priceRange" class="cost-btn" value="800">Below 800</button>
+                        <button type="submit" name="priceRange" class="cost-btn" value="1000">Below 1000</button>
                     </div>
-                </div>
-            </a>
-            <% } %>
-            <% } %>
-        <% } %>
-        <% if(count === 0){ %>
-            <h1>Oops ! No available Cakes in above Category</h1>
-        <% } %>
-    </div>
-    <%- include('footer'); -%>
+                    <div class="dropdown">
+                        <button style="background-color: #431709;" class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2"
+                            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            All
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                            <button type="submit" name="priceRange" class="cost-btn dropdown-item"
+                                value="10000">All</button>
+                            <button type="submit" name="priceRange" class="cost-btn dropdown-item" value="400">Below
+                                400</button>
+                            <button type="submit" name="priceRange" class="cost-btn dropdown-item" value="500">Below
+                                500</button>
+                            <button type="submit" name="priceRange" class="cost-btn dropdown-item" value="600">Below
+                                600</button>
+                            <button type="submit" name="priceRange" class="cost-btn dropdown-item" value="700">Below
+                                700</button>
+                            <button type="submit" name="priceRange" class="cost-btn dropdown-item" value="800">Below
+                                800</button>
+                            <button type="submit" name="priceRange" class="cost-btn dropdown-item" value="1000">Below
+                                1000</button>
+                        </div>
+                    </div>
+                </form>
+                <form action="/products" id="flavor" method="post">
+                    <h2>Select Cake Flavor : </h2>
+                    <div class="options hide">
+                        <button type="submit" name="flavors" class="flavor" value="All">All</button>
+                        <button type="submit" name="flavors" class="flavor" value="Chocolate">Chocolate</button>
+                        <button type="submit" name="flavors" class="flavor" value="Vanila">Vanila</button>
+                        <button type="submit" name="flavors" class="flavor" value="Special">Special</button>
+                        <button type="submit" name="flavors" class="flavor" value="Fruit">Fruit</button>
+                    </div>
+                    <div class="dropdown">
+                        <button style="background-color: #431709;" class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2"
+                            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            All
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                            <button type="submit" name="flavors" class="cost-btn dropdown-item" value="All">All</button>
+                            <button type="submit" name="flavors" class="cost-btn dropdown-item" value="Chocolate">Chocolate</button>
+                            <button type="submit" name="flavors" class="cost-btn dropdown-item" value="Vanila">Vanila</button>
+                            <button type="submit" name="flavors" class="cost-btn dropdown-item" value="Special">Special</button>
+                            <button type="submit" name="flavors" class="cost-btn dropdown-item" value="Fruit">Fruit</button>
+                        </div>
+                    </div>
+                </form>
+                <form action="/products" id="ftr" method="post">
+                    <h2>Sort By :</h2>
+                    <div class="options hide">
+                        <button type="submit" name="filter" value="cakePop">Popularity</button>
+                        <button type="submit" name="filter" value="cakeCost">Price</button>
+                        <button type="submit" name="filter" value="cakeFlavor">Category</button>
+                    </div>
+                    <div class="dropdown">
+                        <button style="background-color: #431709;" class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2"
+                            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Popularity
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                            <button type="submit" name="filter" class="cost-btn dropdown-item" value="cakePop">Popularity</button>
+                            <button type="submit" name="filter" class="cost-btn dropdown-item" value="cakeCost">Price</button>
+                            <button type="submit" name="filter" class="cost-btn dropdown-item" value="cakeFlavor">Category</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <% let count=0; %>
+                <% for(let i=0; i < arr.length; i++){ %>
+                    <% if(arr[i].cakeFlavor==flavor || flavor=="All" ){ %>
+                        <% if(arr[i].cakeCost <=cost){ %>
+                            <% count=1; %>
+                                <% let str=wp + arr[i].cakeId %>
+                                    <% let imgL="img/" + arr[i].cakeId + ".webp" %>
+                                        <a class="op0" target="_blank" href=<%=str %> id="block">
+                                            <div class="cake">
+                                                <img src=<%=imgL %> alt="cakaphotu">
+                                                <div class="cakeInfo">
+                                                    <h2>
+                                                        <%= arr[i].cakeName %>
+                                                    </h2>
+                                                    <p>
+                                                        <%= arr[i].cakeDiscription %>
+                                                    </p>
+                                                    <div class="cost">₹ <%= arr[i].cakeCost %>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <% } %>
+                                            <% } %>
+                                                <% } %>
+                                                    <% if(count===0){ %>
+                                                        <h1>Oops ! No available Cakes in above Category</h1>
+                                                        <% } %>
+        </div>
+        <%- include('footer'); -%>
 
-    <script src="JS/jq.js"></script>
-    <script src="JS/index.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+                integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+                crossorigin="anonymous"></script>
 </body>
+
 </html>
