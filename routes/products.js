@@ -1,7 +1,10 @@
 const express = require("express");
 let router = express.Router();
 let upload = require("./upload");
+let signup = require("./signup");
+let login = require("./login");
 let Cake = upload.cakeModel;
+
 
 let flavor = "All";
 let cost = 10000;

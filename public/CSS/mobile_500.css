@@ -85,25 +85,31 @@
 /* Footer */
 #footer{
     flex-direction: column;
-    min-height: 600px;
+    background: none !important;
 }
 #orderNow{
     width: 100%;
-    height: 200px;
+    background-color: #431709;
+}
+#orderNow button{
+    margin-bottom: 30px;
 }
 #orderNow::before{
     display: none;
 }
 #followUs{
+    margin-top: 0;
     width: 100%;
     height: 200px;
+    background-color: #5c362b;
 }
 #followUs::before{
     display: none;
 }
 #location{
+    margin-top: 0;
     width: 100%;
-    height: 200px;
+    background-color: #431709;
 }
 #location::before{
     display: none;
@@ -261,4 +267,11 @@ iframe {
 #logImg{
     display: none
     !important;
+}
+
+#select button{
+    font-size: 16px;
+}
+.loginbg{
+    height: 600px !important;
 }

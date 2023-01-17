@@ -21,7 +21,11 @@ app.use("/delete" , deleteItem);
 const signUp = require("./routes/signup");
 app.use("/signup" , signUp.page);
 const login = require("./routes/login");
+const signup = require("./routes/signup");
 app.use("/login" , login);
+const select = require("./routes/select");
+app.use("/select" , select);
+
 
 
 app.get("/" , (req, res) => {

@@ -14,9 +14,6 @@ const CakeSchema = new mongoose.Schema({
 });
 const Cake = new mongoose.model("Cake", CakeSchema);
 
-router.get("/", (req, res) => {
-    res.render("upload");
-});
 router.post("/", (req, res) => {
     let id = req.body.Id;
     let Name = req.body.Name;
@@ -35,7 +32,7 @@ router.post("/", (req, res) => {
             console.log(err);
         }
     });
-    res.render("upload");
+    res.redirect("/products");
 });
 
 module.exports = {

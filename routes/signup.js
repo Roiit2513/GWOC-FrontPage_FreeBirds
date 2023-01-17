@@ -35,7 +35,7 @@ router.post("/", (req,res) =>{
                 if(err){
                     res.render("signup" , {Rmsg: "Email already in use ! Go to Login."});
                 } else{
-                    res.render("home" , {});
+                    res.render("home");
                 }
             });
         }
