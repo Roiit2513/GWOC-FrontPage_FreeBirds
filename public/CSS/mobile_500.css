@@ -275,3 +275,7 @@ iframe {
 .loginbg{
     height: 600px !important;
 }
+
+.aim p{
+    font-size: 17px;
+}
