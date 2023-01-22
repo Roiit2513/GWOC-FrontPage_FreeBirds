@@ -16,7 +16,6 @@ router.get("/", auth, async (req, res) => {
     const user = await User.findOne({_id: verifyUser._id});
     res.render("home" , {name: user.name});
 });
-
 let flavor = "All";
 let cost = 10000;
 let wp = process.env.WHATSAPP;
@@ -91,6 +90,36 @@ router.get("/contact", async (req, res) => {
     const verifyUser = jwt.verify(token, process.env.SECRET_KEY);
     const user = await User.findOne({_id: verifyUser._id});
     res.render("contact" , {name: user.name});
+});
+router.get("/logout", async (req, res) => {
+    try {
+        res.clearCookie("jwt");
+        res.redirect("/");
+    } catch (error) {
+        res.send(error);
+    }
+});
+router.get("/select", async (req, res) => {
+    const token = req.cookies.jwt;
+    const verifyUser = jwt.verify(token, process.env.SECRET_KEY);
+    const user = await User.findOne({_id: verifyUser._id});
+    res.render("select" , {name: user.name});
+});
+router.post("/select", async(req, res) => {
+    const token = req.cookies.jwt;
+    const verifyUser = jwt.verify(token, process.env.SECRET_KEY);
+    const user = await User.findOne({_id: verifyUser._id});
+    if (req.body.button == "delete") {
+        Cake.find((err, cakes) => {
+            if (err) {
+                console.log(err);
+            } else {
+                res.render("delete", { cakes: cakes, name: user.name});
+            }
+        });
+    } else{
+        res.render("upload", {name: user.name});
+    }
 });
 
 

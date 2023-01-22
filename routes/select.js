@@ -1,4 +1,5 @@
 const express = require("express");
+const { UserModel } = require("./signup");
 let router = express.Router();
 
 let upload = require("./upload");
@@ -14,7 +15,7 @@ router.post("/", (req, res) => {
             }
         });
     } else{
-        res.render("upload");
+        res.render("upload", {name: user.name});
     }
 });
 
