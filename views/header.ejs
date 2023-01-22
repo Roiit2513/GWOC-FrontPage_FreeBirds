@@ -24,7 +24,11 @@
                 <li class="item hide"><a href="signup">Sign Up</a></li>
                 <li class="item hide"><a href="login">Login</a></li>
             <% } else{ %>
+                <% if(name == "a1bakery"){ %>
+                <li class="item hide"><a href="/user/select">Upload Products</a></li>
+                <% } else{ %>
                 <li class="item hide"><a href="#">Welcome <%= name %></a></li>
+                <% } %>
                 <li class="item hide"><a href="#">LogOut</a></li>
             <% } %>
         </ul>
@@ -50,7 +54,11 @@
                     <li class="item"><a href="/user/products">Our Products</a></li>
                     <li class="item hide"><a href="/user/about">About Us</a></li>
                     <li class="item hide"><a href="/user/contact">Contact Us</a></li>
+                    <% if(name == "a1bakery"){ %>
+                    <li class="item hide"><a href="/user/select">Upload Products</a></li>
+                    <% } else{ %>
                     <li class="item hide"><a href="#">Welcome <%= name %></a></li>
+                    <% } %>
                     <li class="item hide"><a href="/user/logout">LogOut</a></li>
                 <% } %>
 

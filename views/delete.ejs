@@ -16,7 +16,7 @@
         <div id="box">
             <% cakes.forEach(element => { %>
                 <div class="names">
-                    <form action="/delete" method="post">
+                    <form action="/user/delete" method="post">
                         <input type="checkbox" name="checkbox" onChange="this.form.submit()" value=<%= element.cakeId %>>
                     </form>
                     <p><%= element.cakeName %></p>

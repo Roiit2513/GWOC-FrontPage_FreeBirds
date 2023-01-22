@@ -121,6 +121,34 @@ router.post("/select", async(req, res) => {
         res.render("upload", {name: user.name});
     }
 });
-
+router.post("/upload", async(req, res) =>{
+    let id = req.body.Id;
+    let Name = req.body.Name;
+    let Flavor = req.body.Flavor;
+    let Cost = req.body.Cost;
+    let Discription = req.body.Discription;
+    let item = new Cake({
+        cakeId: id,
+        cakeName: Name,
+        cakeFlavor: Flavor,
+        cakeCost: Cost,
+        cakeDiscription: Discription
+    });
+    Cake.insertMany([item], (err) => {
+        if(err){
+            console.log(err);
+        }
+    });
+    res.redirect("/user/products");
+});
+router.post("/delete", async(req,res) =>{
+    let str = req.body.checkbox;
+    Cake.deleteOne({cakeId: str} , (err) => {
+        if(err){
+            console.log(err);
+        }
+    });
+    res.redirect("/user/products");
+});
 
 module.exports = router;
