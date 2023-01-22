@@ -14,7 +14,7 @@ router.get("/" , (req, res) => {
         if(err){
             console.log(err);
         } else{
-            res.render("products" , {arr: cakes, flavor: flavor, cost: cost, wp: wp});
+            res.render("products" , {arr: cakes, flavor: flavor, cost: cost, wp: wp, name: ""});
         }
     });
 });
@@ -31,7 +31,7 @@ router.post("/" , (req, res) => {
                 if(err){
                     console.log(err);
                 } else{
-                    res.render("products" , {arr: cakes, flavor: flavor, cost: cost, wp: wp});
+                    res.render("products" , {arr: cakes, flavor: flavor, cost: cost, wp: wp, name: ""});
                 }
             });
         }
@@ -40,7 +40,7 @@ router.post("/" , (req, res) => {
                 if(err){
                     console.log(err);
                 } else{
-                    res.render("products" , {arr: cakes, flavor: flavor, cost: cost, wp: wp});
+                    res.render("products" , {arr: cakes, flavor: flavor, cost: cost, wp: wp, name: ""});
                 }
             });
         }
@@ -49,7 +49,7 @@ router.post("/" , (req, res) => {
                 if(err){
                     console.log(err);
                 } else{
-                    res.render("products" , {arr: cakes, flavor: flavor, cost: cost, wp: wp});
+                    res.render("products" , {arr: cakes, flavor: flavor, cost: cost, wp: wp, name: ""});
                 }
             });
         }
@@ -58,7 +58,7 @@ router.post("/" , (req, res) => {
         if(err){
             console.log(err);
         } else{
-            res.render("products" , {arr: cakes, flavor: flavor, cost: cost, wp: wp});
+            res.render("products" , {arr: cakes, flavor: flavor, cost: cost, wp: wp, name: ""});
         }
     });
 });

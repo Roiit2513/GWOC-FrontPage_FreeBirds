@@ -9,7 +9,7 @@ router.get("/" , (req, res) => {
         if(err){
             console.log(err);
         } else{
-            res.render("delete" , {cakes: cakes});
+            res.render("delete" , {cakes: cakes, name: ""});
         }
     });
 });

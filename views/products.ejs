@@ -19,6 +19,7 @@
     <%- include('header'); -%>
         <div id="entire">
             <div id="filters">
+                <% if(name == ""){ %>
                 <form action="/products" id="cost" method="post">
                     <h2>Select Price Range : </h2>
                     <div class="options hide">
@@ -95,6 +96,84 @@
                         </div>
                     </div>
                 </form>
+                <% } else{ %>
+                    <form action="/user/products" id="cost" method="post">
+                        <h2>Select Price Range : </h2>
+                        <div class="options hide">
+                            <button type="submit" name="priceRange" class="cost-btn" value="10000">All</button>
+                            <button type="submit" name="priceRange" class="cost-btn" value="400">Below 400</button>
+                            <button type="submit" name="priceRange" class="cost-btn" value="500">Below 500</button>
+                            <button type="submit" name="priceRange" class="cost-btn" value="600">Below 600</button>
+                            <button type="submit" name="priceRange" class="cost-btn" value="700">Below 700</button>
+                            <button type="submit" name="priceRange" class="cost-btn" value="800">Below 800</button>
+                            <button type="submit" name="priceRange" class="cost-btn" value="1000">Below 1000</button>
+                        </div>
+                        <div class="dropdown">
+                            <button style="background-color: #431709;" class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2"
+                                data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                All
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                                <button type="submit" name="priceRange" class="cost-btn dropdown-item"
+                                    value="10000">All</button>
+                                <button type="submit" name="priceRange" class="cost-btn dropdown-item" value="400">Below
+                                    400</button>
+                                <button type="submit" name="priceRange" class="cost-btn dropdown-item" value="500">Below
+                                    500</button>
+                                <button type="submit" name="priceRange" class="cost-btn dropdown-item" value="600">Below
+                                    600</button>
+                                <button type="submit" name="priceRange" class="cost-btn dropdown-item" value="700">Below
+                                    700</button>
+                                <button type="submit" name="priceRange" class="cost-btn dropdown-item" value="800">Below
+                                    800</button>
+                                <button type="submit" name="priceRange" class="cost-btn dropdown-item" value="1000">Below
+                                    1000</button>
+                            </div>
+                        </div>
+                    </form>
+                    <form action="/user/products" id="flavor" method="post">
+                        <h2>Select Cake Flavor : </h2>
+                        <div class="options hide">
+                            <button type="submit" name="flavors" class="flavor" value="All">All</button>
+                            <button type="submit" name="flavors" class="flavor" value="Chocolate">Chocolate</button>
+                            <button type="submit" name="flavors" class="flavor" value="Vanila">Vanila</button>
+                            <button type="submit" name="flavors" class="flavor" value="Special">Special</button>
+                            <button type="submit" name="flavors" class="flavor" value="Fruit">Fruit</button>
+                        </div>
+                        <div class="dropdown">
+                            <button style="background-color: #431709;" class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2"
+                                data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                All
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                                <button type="submit" name="flavors" class="cost-btn dropdown-item" value="All">All</button>
+                                <button type="submit" name="flavors" class="cost-btn dropdown-item" value="Chocolate">Chocolate</button>
+                                <button type="submit" name="flavors" class="cost-btn dropdown-item" value="Vanila">Vanila</button>
+                                <button type="submit" name="flavors" class="cost-btn dropdown-item" value="Special">Special</button>
+                                <button type="submit" name="flavors" class="cost-btn dropdown-item" value="Fruit">Fruit</button>
+                            </div>
+                        </div>
+                    </form>
+                    <form action="/user/products" id="ftr" method="post">
+                        <h2>Sort By :</h2>
+                        <div class="options hide">
+                            <button type="submit" name="filter" value="cakePop">Popularity</button>
+                            <button type="submit" name="filter" value="cakeCost">Price</button>
+                            <button type="submit" name="filter" value="cakeFlavor">Category</button>
+                        </div>
+                        <div class="dropdown">
+                            <button style="background-color: #431709;" class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2"
+                                data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Popularity
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                                <button type="submit" name="filter" class="cost-btn dropdown-item" value="cakePop">Popularity</button>
+                                <button type="submit" name="filter" class="cost-btn dropdown-item" value="cakeCost">Price</button>
+                                <button type="submit" name="filter" class="cost-btn dropdown-item" value="cakeFlavor">Category</button>
+                            </div>
+                        </div>
+                    </form>
+                <% } %>
             </div>
             <% let count=0; %>
                 <% for(let i=0; i < arr.length; i++){ %>
@@ -103,7 +182,6 @@
                             <% count=1; %>
                                 <% let str=wp + arr[i].cakeId %>
                                     <% let imgL="img/" + arr[i].cakeId + ".webp" %>
-                                        <a class="op0" target="_blank" href=<%=str %> id="block">
                                             <div class="cake">
                                                 <img src=<%=imgL %> alt="cakaphotu">
                                                 <div class="cakeInfo">
@@ -113,11 +191,13 @@
                                                     <p>
                                                         <%= arr[i].cakeDiscription %>
                                                     </p>
-                                                    <div class="cost">₹ <%= arr[i].cakeCost %>
+                                                    <div class="costNbuy">
+                                                        <div class="cost">₹ <%= arr[i].cakeCost %>
+                                                        </div>
+                                                        <a target="_blank" href=<%=str %> >Buy Now</a>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </a>
                                         <% } %>
                                             <% } %>
                                                 <% } %>
