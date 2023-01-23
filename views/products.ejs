@@ -183,7 +183,8 @@
                                 <% let str=wp + arr[i].cakeId %>
                                     <% let imgL = "" %> 
                                     <% if(arr[i].image){ %>
-                                        <% imgL = "img/uploads/" + arr[i].image %>
+                                        <% imgL = "uploads/" + arr[i].image %>
+                                        <p><%= imgL %></p>
                                     <% } else { %>
                                     <% imgL="img/" + arr[i].cakeId + ".webp" %>
                                     <% } %>
