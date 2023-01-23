@@ -12,6 +12,7 @@
 }
 #ubox{
     display: flex;
+    justify-content: center;
     width: 60%;
     height: 550px;
     margin: 30px;
@@ -57,4 +58,8 @@
     border-radius: 30px;
     font-size: 17px;
     cursor: pointer;
+}
+#img{
+    border-radius: 0px
+    !important;
 }

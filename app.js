@@ -4,6 +4,7 @@ const bodyParser = require("body-parser");
 const ejs = require("ejs");
 const cookieParser = require("cookie-parser");
 const jwt = require("jsonwebtoken");
+const multer = require("multer");
 
 const app = express();
 app.use(bodyParser.urlencoded({extended: true}));

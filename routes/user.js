@@ -1,6 +1,7 @@
 const express = require("express");
 let router = express.Router();
 const auth = require("../middleware/auth");
+const multer = require("multer");
 
 const jwt = require("jsonwebtoken");
 const signUp = require("./signup");
@@ -9,6 +10,20 @@ router.use(express.static("public"));
 
 let upload = require("./upload");
 let Cake = upload.cakeModel;
+if(typeof localStorage === "undefined" || localStorage === null){
+    const LocalStorage = require('node-localstorage').LocalStorage;
+    localStorage = new LocalStorage("./scratch");
+}
+let Storage = multer.diskStorage({
+    destination: 'public/img/uploads',
+    filename: (req, file, cb) => {
+        cb(null, file.fieldname+"_"+Date.now()+file.originalname.substring(file.originalname.indexOf(".")));
+    }
+});
+let uploadCakeImg =  multer({
+    storage: Storage
+}).single('image');
+
 
 router.get("/", auth, async (req, res) => {
     const token = req.cookies.jwt;
@@ -121,18 +136,20 @@ router.post("/select", async(req, res) => {
         res.render("upload", {name: user.name});
     }
 });
-router.post("/upload", async(req, res) =>{
+router.post("/upload", uploadCakeImg, async(req, res) =>{
     let id = req.body.Id;
     let Name = req.body.Name;
     let Flavor = req.body.Flavor;
     let Cost = req.body.Cost;
     let Discription = req.body.Discription;
+    let img = req.file.filename;
     let item = new Cake({
         cakeId: id,
         cakeName: Name,
         cakeFlavor: Flavor,
         cakeCost: Cost,
-        cakeDiscription: Discription
+        cakeDiscription: Discription,
+        image: img
     });
     Cake.insertMany([item], (err) => {
         if(err){

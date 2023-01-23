@@ -181,9 +181,14 @@
                         <% if(arr[i].cakeCost <=cost){ %>
                             <% count=1; %>
                                 <% let str=wp + arr[i].cakeId %>
-                                    <% let imgL="img/" + arr[i].cakeId + ".webp" %>
+                                    <% let imgL = "" %> 
+                                    <% if(arr[i].image){ %>
+                                        <% imgL = "img/uploads/" + arr[i].image %>
+                                    <% } else { %>
+                                    <% imgL="img/" + arr[i].cakeId + ".webp" %>
+                                    <% } %>
                                             <div class="cake">
-                                                <img src=<%=imgL %> alt="cakaphotu">
+                                                <img src=<%= imgL %> alt="cakaphotu">
                                                 <div class="cakeInfo">
                                                     <h2>
                                                         <%= arr[i].cakeName %>

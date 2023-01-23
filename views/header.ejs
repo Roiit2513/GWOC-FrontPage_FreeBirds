@@ -17,20 +17,25 @@
     <div class="" id="list">
         <div class="blank"></div>
         <ul>
-            <li class="item"><a href="/">Home</a></li>
-            <li class="item"><a href="about">About Us</a></li>
-            <li class="item"><a href="contact">Contact Us</a></li>
+            <!-- <li class="item" id="logo"><a href=""><img src="img/logo.png" alt=""></a></li> -->
             <% if(name=="" ){ %>
-                <li class="item hide"><a href="signup">Sign Up</a></li>
-                <li class="item hide"><a href="login">Login</a></li>
+                <li class="item"><a href="/">Home</a></li>
+                <li class="item"><a href="about">About Us</a></li>
+                <li class="item"><a href="contact">Contact Us</a></li>
+                <li class="item"><a href="signup">Sign Up</a></li>
+                <li class="item"><a href="login">Login</a></li>
             <% } else{ %>
+                <li class="item"><a href="/user">Home</a></li>
+                <li class="item"><a href="/user/about">About Us</a></li>
+                <li class="item"><a href="/user/contact">Contact Us</a></li>
                 <% if(name == "a1bakery"){ %>
-                <li class="item hide"><a href="/user/select">Upload Products</a></li>
+                <li class="item"><a href="/user/select">Upload Products</a></li>
                 <% } else{ %>
-                <li class="item hide"><a href="#">Welcome <%= name %></a></li>
+                <li class="item"><a href="#">Welcome <%= name %></a></li>
                 <% } %>
-                <li class="item hide"><a href="#">LogOut</a></li>
+                <li class="item"><a href="/user/logout">LogOut</a></li>
             <% } %>
+
         </ul>
     </div>
     <div id="mobTitle">

@@ -10,7 +10,8 @@ const CakeSchema = new mongoose.Schema({
     cakeName: String,
     cakeFlavor: String,
     cakeCost: Number,
-    cakeDiscription: String
+    cakeDiscription: String,
+    image: String
 });
 const Cake = new mongoose.model("Cake", CakeSchema);
 

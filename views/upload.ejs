@@ -15,14 +15,14 @@
     
     <div id="entire">
         <div id="ubox">
-            <div id="uImg"></div>
             <div id="uText">
-                <form action="/user/upload" method="post">
+                <form action="/user/upload" method="post" enctype="multipart/form-data">
                     <input type="number" name="Id" placeholder="Enter Cake Id" required>
                     <input type="text" name="Name" placeholder="Enter Cake Name" required>
                     <input type="text" name="Flavor" placeholder="Enter Cake Flavor" required>
                     <input type="number" name="Cost" placeholder="Enter Cake Cost" required>
                     <input type="text" name="Discription" placeholder="Enter Cake Discription" required>
+                    <input type="file" name="image" id="img">
                     <button type="submit">Upload Cake</button>
                 </form>
             </div>
