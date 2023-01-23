@@ -10,10 +10,10 @@ router.use(express.static("public"));
 
 let upload = require("./upload");
 let Cake = upload.cakeModel;
-// if(typeof localStorage === "undefined" || localStorage === null){
-//     const LocalStorage = require('node-localstorage').LocalStorage;
-//     localStorage = new LocalStorage("./scratch");
-// }
+if(typeof localStorage === "undefined" || localStorage === null){
+    const LocalStorage = require('node-localstorage').LocalStorage;
+    localStorage = new LocalStorage("./scratch");
+}
 let Storage = multer.diskStorage({
     destination: 'public/img/uploads',
     filename: (req, file, cb) => {
