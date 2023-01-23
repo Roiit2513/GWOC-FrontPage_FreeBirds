@@ -10,19 +10,19 @@ router.use(express.static("public"));
 
 let upload = require("./upload");
 let Cake = upload.cakeModel;
-if(typeof localStorage === "undefined" || localStorage === null){
-    const LocalStorage = require('node-localstorage').LocalStorage;
-    localStorage = new LocalStorage("./scratch");
-}
-let Storage = multer.diskStorage({
-    destination: 'public/img/uploads',
-    filename: (req, file, cb) => {
-        cb(null, file.fieldname+"_"+Date.now()+file.originalname.substring(file.originalname.indexOf(".")));
-    }
-});
-let uploadCakeImg =  multer({
-    storage: Storage
-}).single('image');
+// if(typeof localStorage === "undefined" || localStorage === null){
+//     const LocalStorage = require('node-localstorage').LocalStorage;
+//     localStorage = new LocalStorage("./scratch");
+// }
+// let Storage = multer.diskStorage({
+//     destination: 'public/img/uploads',
+//     filename: (req, file, cb) => {
+//         cb(null, file.fieldname+"_"+Date.now()+file.originalname.substring(file.originalname.indexOf(".")));
+//     }
+// });
+// let uploadCakeImg =  multer({
+//     storage: Storage
+// }).single('image');
 
 
 router.get("/", auth, async (req, res) => {
@@ -149,7 +149,7 @@ router.post("/upload", uploadCakeImg, async(req, res) =>{
         cakeFlavor: Flavor,
         cakeCost: Cost,
         cakeDiscription: Discription,
-        image: img
+        // image: img
     });
     Cake.insertMany([item], (err) => {
         if(err){
