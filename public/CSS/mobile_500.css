@@ -89,7 +89,7 @@
 }
 #orderNow{
     width: 100%;
-    background-color: #431709;
+    background-color: #C40D0D;
 }
 #orderNow button{
     margin-bottom: 30px;
@@ -101,7 +101,7 @@
     margin-top: 0;
     width: 100%;
     height: 200px;
-    background-color: #5c362b;
+    background-color: #e55858;
 }
 #followUs::before{
     display: none;
@@ -109,7 +109,7 @@
 #location{
     margin-top: 0;
     width: 100%;
-    background-color: #431709;
+    background-color: #C40D0D;
 }
 #location::before{
     display: none;
