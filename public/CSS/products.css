@@ -23,14 +23,15 @@
 }
 #ftr{
     width: 20%;
-    background-color: #43261645;
+    background-color: #e75a5aa7;
 }
 #cost{
     width: 40%;
-    background-color: #43261645;
+    background-color: #e75a5aa7;
 }
 #flavor{
     width: 40%;
+    background-color: #e75a5a46;
 }
 #filters form h2{
     margin: 15px;
@@ -75,7 +76,7 @@
     border-radius: 20px;
     margin: 20px;
     transition: 1s;
-    background-color: #431709;
+    background-color: #C40D0D;
 }
 .cake:hover{
     width: 90%;

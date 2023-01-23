@@ -9,7 +9,7 @@
 }
 #left{
     width: 50%;
-    border-right: solid 5px #431709;
+    border-right: solid 5px #C40D0D;
     border-radius: 20px;
 }
 #left img{
@@ -26,19 +26,19 @@
          linear-gradient(45deg,
              rgba(0,0,0,0) 0%,
              rgba(0,0,0,0) calc(40% - 0.8px),
-             #431709 50%,
+             #C40D0D 50%,
              rgba(0,0,0,0) calc(50% + 0.8px),
              rgba(0,0,0,0) 100%),
          linear-gradient(-45deg,
              rgba(0,0,0,0) 0%,
              rgba(0,0,0,0) calc(40% - 0.8px),
-             #431709 50%,
+             #C40D0D 50%,
              rgba(0,0,0,0) calc(50% + 0.8px),
              rgba(0,0,0,0) 100%);
 }
 #right{
     width: 50%;
-    border-left: solid 4px #431709;
+    border-left: solid 4px #c40D0D;
     border-radius: 20px;
 }
 .blankBox{
@@ -57,19 +57,19 @@
          linear-gradient(45deg,
              rgba(0,0,0,0) 0%,
              rgba(0,0,0,0) calc(40% - 0.8px),
-             #431709 50%,
+             #C40D0D 50%,
              rgba(0,0,0,0) calc(50% + 0.8px),
              rgba(0,0,0,0) 100%),
          linear-gradient(-45deg,
              rgba(0,0,0,0) 0%,
              rgba(0,0,0,0) calc(40% - 0.8px),
-             #431709 50%,
+             #C40D0D 50%,
              rgba(0,0,0,0) calc(50% + 0.8px),
              rgba(0,0,0,0) 100%);
 }
 .aim{
     width: 80%;
-    border: dashed 3px #431709;
+    border: dashed 3px #C40D0D;
     border-radius: 20px;
     margin: 30px 0px;
     margin-right: 15px;
@@ -81,7 +81,7 @@
     padding: 15px;
     padding-left: 20px;
     text-align: justify;
-    color: #431709;
+    color: #C40D0D;
     font-size: 18px;
 }
 
@@ -103,7 +103,7 @@
     width: 75%;
     margin-left: 33px;
     height: 300px;
-    border: solid 4px #431709;
+    border: solid 4px #C40D0D;
     border-radius: 50px;
 }
 #slant2{
@@ -113,13 +113,13 @@
          linear-gradient(45deg,
              rgba(0,0,0,0) 0%,
              rgba(0,0,0,0) calc(40% - 0.8px),
-             #431709 50%,
+             #C40D0D 50%,
              rgba(0,0,0,0) calc(50% + 0.8px),
              rgba(0,0,0,0) 100%),
          linear-gradient(-45deg,
              rgba(0,0,0,0) 0%,
              rgba(0,0,0,0) calc(40% - 0.8px),
-             #431709 50%,
+             #C40D0D 50%,
              rgba(0,0,0,0) calc(50% + 0.8px),
              rgba(0,0,0,0) 100%);
 }
